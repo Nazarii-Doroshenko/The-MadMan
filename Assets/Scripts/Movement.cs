@@ -17,19 +17,19 @@ public class Movement : MonoBehaviour
         if (rigidbody == null)
             rigidbody = gameObject.AddComponent<Rigidbody>();
         
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             rigidbody.AddForce(Vector3.forward * force);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             rigidbody.AddForce(Vector3.left * force);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             rigidbody.AddForce(Vector3.back * force);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             rigidbody.AddForce(Vector3.right * force);
         }
