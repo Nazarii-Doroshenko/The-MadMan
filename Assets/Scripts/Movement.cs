@@ -1,37 +1,77 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
     public float force;
     MeshRenderer meshRenderer;
+
+    public Button forward;
+    public Button left;
+    public Button back;
+    public Button right;
+
     void Start()
     {
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
     }
-    public void Inp()
+    //Buttons;
+    public void GoForward()
     {
+        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
+        if (rigidbody == null)
+            rigidbody = gameObject.AddComponent<Rigidbody>();
+
         
+        rigidbody.AddForce(Vector3.forward * force);
+        
+    }
+    public void GoLeft()
+    {
         Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
         if (rigidbody == null)
             rigidbody = gameObject.AddComponent<Rigidbody>();
         
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        rigidbody.AddForce(Vector3.left * force);
+        
+
+    }    
+    public void GoBack()
+    {
+        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
+        if (rigidbody == null)
+            rigidbody = gameObject.AddComponent<Rigidbody>();
+        rigidbody.AddForce(Vector3.back * force);
+    }
+    public void GoRight()
+    {
+        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
+        if (rigidbody == null)
+            rigidbody = gameObject.AddComponent<Rigidbody>();
+        rigidbody.AddForce(Vector3.right * force);
+    }
+
+    public void Inp()
+    {
+        
+       
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) //Forward
         {
-            rigidbody.AddForce(Vector3.forward * force);
+            GoForward();
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) //Left
         {
-            rigidbody.AddForce(Vector3.left * force);
+            GoLeft();
         }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) //Back
         {
-            rigidbody.AddForce(Vector3.back * force);
+            GoBack();
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right
         {
-            rigidbody.AddForce(Vector3.right * force);
+            GetComponent<Rigidbody>().AddForce(Vector3.right * force);
         }
        /* if (Input.GetKeyDown(KeyCode.Space))
         {

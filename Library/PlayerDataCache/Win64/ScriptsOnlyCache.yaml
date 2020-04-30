@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraFollow
     - ChangeScene
+    - ChangeSceneTrigger
     - Movement
     - OpenButton
     - ShowText
@@ -166,6 +167,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13540}
     - Class: 114
       Script: {instanceID: 13586}
+    - Class: 114
+      Script: {instanceID: 15514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -422,7 +425,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: b9048d3760274b9fd3dc94b75b3d0f96
+      Hash: 137b0935b8acf95c889baa45673793ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -572,7 +575,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 6364e7fb0724e90170c0ff576f13de8c
+      Hash: 39d2d82255d9d17207015099c011fb74
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangeScene
@@ -696,6 +699,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeSceneTrigger
   platform: 19
   scenePathNames:
   - Assets/Scenes/Labyrinth_LVL1.unity
