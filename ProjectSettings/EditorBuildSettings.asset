@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Labyrinth_LVL3.unity
     guid: 9d298d5dc35929447b15974a5d999322
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth_LVL4.unity
+    guid: 67cf24a46c3005a4f80cfc87e0b4fb12
   m_configObjects: {}

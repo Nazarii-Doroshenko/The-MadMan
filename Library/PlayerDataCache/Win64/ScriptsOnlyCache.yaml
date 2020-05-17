@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraFollow
     - ChangeScene
-    - ChangeSceneTrigger
     - Movement
     - OpenButton
     - ShowText
@@ -58,11 +57,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
@@ -71,29 +76,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11858}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11998}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 12508}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 13090}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 13544}
     - Class: 114
-      Script: {instanceID: 13540}
-    - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -111,6 +114,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/Labyrinth_LVL2.unity:
     - Class: 1
@@ -139,36 +148,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11858}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 11998}
     - Class: 114
-      Script: {instanceID: 12508}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 13090}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13540}
+      Script: {instanceID: 13544}
     - Class: 114
-      Script: {instanceID: 13586}
-    - Class: 114
-      Script: {instanceID: 15514}
+      Script: {instanceID: 13590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -187,6 +198,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
     Assets/Scenes/Labyrinth_LVL3.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -194,7 +211,90 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11284}
+    - Class: 114
+      Script: {instanceID: 11490}
+    - Class: 114
+      Script: {instanceID: 11538}
+    - Class: 114
+      Script: {instanceID: 11736}
+    - Class: 114
+      Script: {instanceID: 11862}
+    - Class: 114
+      Script: {instanceID: 11998}
+    - Class: 114
+      Script: {instanceID: 12084}
+    - Class: 114
+      Script: {instanceID: 12514}
+    - Class: 114
+      Script: {instanceID: 13096}
+    - Class: 114
+      Script: {instanceID: 13544}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    Assets/Scenes/Labyrinth_LVL4.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -341,6 +441,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 4e933004be67d0b73c3dff8d4bf2056f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeScene
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -371,7 +477,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 4c744a1be521b7267f8b7387e8edcaf5
+      Hash: 74a626947dff6091d65bcde323672869
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OpenButton
@@ -425,7 +531,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 137b0935b8acf95c889baa45673793ea
+      Hash: 91991c86d80d20708c6e086753ea07d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -575,12 +681,6 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 39d2d82255d9d17207015099c011fb74
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeScene
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -699,15 +799,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeSceneTrigger
   platform: 19
   scenePathNames:
   - Assets/Scenes/Labyrinth_LVL1.unity
   - Assets/Scenes/Labyrinth_LVL2.unity
   - Assets/Scenes/Labyrinth_LVL3.unity
+  - Assets/Scenes/Labyrinth_LVL4.unity
   playerPath: C:/Users/HP/The-MadMan-master/The MadMan Game/The MadMan.exe

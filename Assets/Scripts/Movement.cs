@@ -6,72 +6,50 @@ using UnityEngine.UI;
 public class Movement : MonoBehaviour
 {
     public float force;
-    MeshRenderer meshRenderer;
+    
 
     public Button forward;
     public Button left;
-    public Button back;
+    public Button back; 
     public Button right;
 
-    void Start()
-    {
-        meshRenderer = gameObject.GetComponent<MeshRenderer>();
-    }
+    public new Rigidbody rigidbody;
+    
     //Buttons;
     public void GoForward()
-    {
-        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-        if (rigidbody == null)
-            rigidbody = gameObject.AddComponent<Rigidbody>();
-
-        
-        rigidbody.AddForce(Vector3.forward * force);
-        
+    {    
+        rigidbody.AddForce(Vector3.forward * force);        
     }
     public void GoLeft()
-    {
-        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-        if (rigidbody == null)
-            rigidbody = gameObject.AddComponent<Rigidbody>();
-        
+    {             
         rigidbody.AddForce(Vector3.left * force);
-        
-
     }    
     public void GoBack()
-    {
-        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-        if (rigidbody == null)
-            rigidbody = gameObject.AddComponent<Rigidbody>();
+    {              
         rigidbody.AddForce(Vector3.back * force);
     }
     public void GoRight()
-    {
-        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-        if (rigidbody == null)
-            rigidbody = gameObject.AddComponent<Rigidbody>();
+    {             
         rigidbody.AddForce(Vector3.right * force);
     }
 
     public void Inp()
-    {
-        
-       
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) //Forward
+    {       
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) /*|| Input.GetButtonDown("forward")*/) //Forward
         {
-            GoForward();
+            GoForward();          
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) //Left
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) /*||  Input.GetButtonDown("left")*/) //Left
         {
             GoLeft();
         }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) //Back
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) /*|| Input.GetButtonDown("back")*/) //Back
         {
             GoBack();
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) /*|| Input.GetButtonDown("right")*/) // Right
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.right * force);
+            GoRight();
         }
        /* if (Input.GetKeyDown(KeyCode.Space))
         {
