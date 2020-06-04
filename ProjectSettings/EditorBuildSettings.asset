@@ -6,15 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Labyrinth_LVL1.unity
+    path: Assets/Scenes/Labyrinth/Labyrinth_LVL1_Tutorial.unity
     guid: 0767e24209f75b14b89ce45edf94fa3d
   - enabled: 1
-    path: Assets/Scenes/Labyrinth_LVL2.unity
+    path: Assets/Scenes/Labyrinth/Labyrinth_LVL2_Tutorial.unity
     guid: 8ec8e21db85ea1f4eb1ab7d67e3fbf0a
   - enabled: 1
-    path: Assets/Scenes/Labyrinth_LVL3.unity
+    path: Assets/Scenes/Labyrinth/Labyrinth_LVL3_Tutorial.unity
     guid: 9d298d5dc35929447b15974a5d999322
   - enabled: 1
-    path: Assets/Scenes/Labyrinth_LVL4.unity
+    path: Assets/Scenes/Labyrinth/Labyrinth_LVL4_Tutorial.unity
     guid: 67cf24a46c3005a4f80cfc87e0b4fb12
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth/Labyrinth_LVL5_Tutorial.unity
+    guid: 4438936b0b50e7e42baa7aa896933e02
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth/Labyrinth_LVL6_Volcano.unity
+    guid: e93742df46997b84c9e35b234e462faa
   m_configObjects: {}

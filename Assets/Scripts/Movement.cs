@@ -6,73 +6,97 @@ using UnityEngine.UI;
 public class Movement : MonoBehaviour
 {
     public float force;
-    
+    public float jumpForce = 1000;
 
-    public Button forward;
+    public float maxForce = 40;
+    public float minForce = 5;
+
+    public bool canJump;
+
+    /*int dx;
+    int dy;
+    int dz;
+    */
+   /* public Button forward;
     public Button left;
     public Button back; 
     public Button right;
-
+    */
     public new Rigidbody rigidbody;
     
-    //Buttons;
     public void GoForward()
-    {    
-        rigidbody.AddForce(Vector3.forward * force);        
-    }
-    public void GoLeft()
-    {             
-        rigidbody.AddForce(Vector3.left * force);
-    }    
-    public void GoBack()
-    {              
-        rigidbody.AddForce(Vector3.back * force);
-    }
-    public void GoRight()
-    {             
-        rigidbody.AddForce(Vector3.right * force);
+    {
+        
+        transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * force;
+        
     }
 
+    public void GoLeft()
+    {
+        transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * force;
+
+    }  
+    
+    public void GoBack()
+    {
+        transform.position += transform.TransformDirection(Vector3.back) * Time.deltaTime * force;
+
+    }
+
+    public void GoRight()
+    {
+        transform.position += transform.TransformDirection(Vector3.right) * Time.deltaTime * force;
+
+    }
+
+    public void Jump()
+    {
+       rigidbody.AddForce(Vector3.up * jumpForce);
+       //transform.position += transform.TransformDirection(Vector3.up) * Time.deltaTime * jumpForce;
+    }
+
+
     public void Inp()
-    {       
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) /*|| Input.GetButtonDown("forward")*/) //Forward
+    {
+        rigidbody.freezeRotation = true;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) //Forward
         {
             GoForward();          
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) /*||  Input.GetButtonDown("left")*/) //Left
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) //Left
         {
             GoLeft();
         }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) /*|| Input.GetButtonDown("back")*/) //Back
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) //Back
         {
             GoBack();
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) /*|| Input.GetButtonDown("right")*/) // Right
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right
         {
             GoRight();
         }
-       /* if (Input.GetKeyDown(KeyCode.Space))
+        if( canJump == true && Input.GetKeyDown(KeyCode.Space))
         {
-            rigidbody.AddForce(Vector3.up * force * 50);
-        }*/
-        
-    }
-    public void AppllyModifers()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            force *= 2 ;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            force /= 10;
+            Jump();
         }
 
+    }
+
+    public void AppllyModifers()
+    {       
+        if (Input.GetKey(KeyCode.LeftShift) && force < maxForce)
+        { 
+            force *= 2;
+        }
+        if (Input.GetKey(KeyCode.LeftControl) && force > minForce)
+        {
+            force /= 2;
+        }           
     }
     
     void Update()
     {
+        
         AppllyModifers();
         Inp();
     }

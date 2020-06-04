@@ -6,23 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public int sceneNum;
+    public float sceneNum;
     public Button finish;
     
     public GameObject player;
 
     public void Labyrinth_Lvl_2()
     {
-            SceneManager.LoadScene("Labyrinth_LVL2");        
+            SceneManager.LoadScene("Labyrinth_LVL2_Tutorial");        
     }
     public void Labyrinth_Lvl_3()
     {       
-            SceneManager.LoadScene("Labyrinth_LVL3");       
+            SceneManager.LoadScene("Labyrinth_LVL3_Tutorial");       
     }
     public void Labyrinth_Lvl_4()
     {        
-            SceneManager.LoadScene("Labyrinth_LVL4");       
+            SceneManager.LoadScene("Labyrinth_LVL4_Tutorial");       
     }
+    public void Labyrinth_Lvl_5()
+    {
+        SceneManager.LoadScene("Labyrinth_LVL5_Tutorial");
+    }
+    public void Labyrinth_Lvl_6()
+    {
+        SceneManager.LoadScene("Labyrinth_LVL6_Volcano");
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,6 +42,14 @@ public class ChangeScene : MonoBehaviour
         if (sceneNum == 4)
         {
             Labyrinth_Lvl_4();
+        }
+        if (sceneNum == 5)
+        {
+            Labyrinth_Lvl_5();
+        }
+        if (sceneNum == 6)
+        {
+            Labyrinth_Lvl_6();
         }
     }
     

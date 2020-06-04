@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-
 public class OpenButton : MonoBehaviour
 {
     public Button openButton;
+
     public GameObject door;
+
     public AudioMixer mixer;
     public AudioSource source;
+
     Vector3 previous;
+
     int n = 0;
+
     public void openDoor()
     {
         if (n == 0)
@@ -20,14 +24,13 @@ public class OpenButton : MonoBehaviour
             previous = door.transform.localScale;
             door.transform.localScale = new Vector3(1, 1, 1);
             source.Play();
-            n++; 
-            
+            n++;             
         }
         else
         {
             door.transform.localScale = previous;
-            n--;
             source.Play();
+            n--;           
         }
     }  
 }
