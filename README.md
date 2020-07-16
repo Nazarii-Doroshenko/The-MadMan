@@ -1,5 +1,4 @@
 # The-MadMan 
-##
 Labyrinth levels controls:
 Forward - W;
 Left - A;
