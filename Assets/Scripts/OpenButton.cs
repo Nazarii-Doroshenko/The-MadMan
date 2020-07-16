@@ -11,7 +11,8 @@ public class OpenButton : MonoBehaviour
     public GameObject door;
 
     public AudioMixer mixer;
-    public AudioSource source;
+    public AudioSource sourceDoor1;
+    public AudioSource sourceDoor2;
 
     Vector3 previous;
 
@@ -23,13 +24,13 @@ public class OpenButton : MonoBehaviour
         {
             previous = door.transform.localScale;
             door.transform.localScale = new Vector3(1, 1, 1);
-            source.Play();
+            sourceDoor1.Play();
             n++;             
         }
         else
         {
             door.transform.localScale = previous;
-            source.Play();
+            sourceDoor2.Play();
             n--;           
         }
     }  

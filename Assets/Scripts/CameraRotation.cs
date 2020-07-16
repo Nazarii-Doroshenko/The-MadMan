@@ -12,7 +12,7 @@ public class CameraRotation : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(1))
+       if (Input.GetMouseButton(0))
         {
             yaw += speedH * Input.GetAxis("Mouse X");
             pitch -= speedV * Input.GetAxis("Mouse Y");
