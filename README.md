@@ -9,5 +9,5 @@ Right - D;
 #
 Jump (on some levels) - Space;
 #
-Right mouse button (on some levels) - change camera rotation;
+Left mouse button (on some levels) - change camera rotation;
 #
