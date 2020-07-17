@@ -7,88 +7,65 @@ using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
-    public float force = 10;
-    public float jumpForce = 1000;
-
-    public float maxForce = 40;
-    public float minForce = 5;
+    public CharacterController playerController;
+    public float force = 40;
+    public float jumpForce = 50;
 
     public bool canJump;
+    private Vector3 moveDirection = Vector3.zero;
+    public float gravity = 20.0F;
 
-    /*Vector3 dx;
-    Vector3 dy;
-    Vector3 dz;
-    */
-    
-   /* public Button forward;
-    public Button left;
-    public Button back; 
-    public Button right;
-    */
-   new private Rigidbody rigidbody;
-
-    //public LayerMask groundLayers;
+    new private Rigidbody rigidbody;
 
     public SphereCollider col;
-
-    //public GameObject player;
 
     public new GameObject camera;
     private bool IsGrounded = true;
 
     void Start()
     {
+        playerController = GetComponent<CharacterController>();
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.freezeRotation = true;
         col = GetComponent<SphereCollider>();
     }
     void Update()
     {  
-        AppllyModifers();
         Inp();  
+    }
+    public void JumpForUI()
+    {
+        if (IsGrounded == true && canJump == true)
+        {
+            moveDirection.y = jumpForce;
+        }
+        moveDirection.y -= gravity * Time.deltaTime;
+        playerController.Move(moveDirection * Time.deltaTime);
     }
     public void Jump()
     {
-        rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        if (Input.GetButtonDown("Jump") && IsGrounded == true && canJump == true)
+        {
+            moveDirection.y = jumpForce;
+        }
+        moveDirection.y -= gravity * Time.deltaTime;
+        playerController.Move(moveDirection * Time.deltaTime);
     }
     private void OnCollisionEnter(Collision collision)
     {
         IsGrounded = true;
-    }/*
-    public void GoForward()
-    {
-        transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * force;
     }
-
-    public void GoLeft()
-    {
-        transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * force;
-    }  
     
-    public void GoBack()
-    {
-       
-        transform.position += transform.TransformDirection(Vector3.back) * Time.deltaTime * force;
-    }
-
-    public void GoRight()
-    {
-        
-        transform.position += transform.TransformDirection(Vector3.right) * Time.deltaTime * force;
-    }
-    */
+ // transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * force;
    
 
 
     public void Inp()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-
-
-        float verticalInput = Input.GetAxis("Vertical");
-
-
-        transform.Translate(new Vector3(horizontalInput, 0, verticalInput) * force * Time.deltaTime);
+        Vector3 mov = new Vector3(SimpleInput.GetAxis("Horizontal") * force, 0, SimpleInput.GetAxis("Vertical") * force);
+        playerController.Move(mov * Time.deltaTime);
+        Jump();
+        
 
 
         /*
@@ -114,26 +91,8 @@ public class Movement : MonoBehaviour
             Check();
         }
         */
-        if ( canJump == true && Input.GetKeyDown(KeyCode.Space) && IsGrounded == true)
-        {      
-            Jump();
-            IsGrounded = false;
-        }
         
     }
-
-    public void AppllyModifers()
-    {       
-        if (Input.GetKey(KeyCode.LeftShift) && force < maxForce)
-        { 
-            force *= 2;
-        }
-        if (Input.GetKey(KeyCode.LeftControl) && force > minForce)
-        {
-            force /= 2;
-        }           
-    }
-    
    
     private void Check()
     {

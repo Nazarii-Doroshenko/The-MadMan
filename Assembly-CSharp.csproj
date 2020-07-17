@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\ChangeSceneLabyrinth.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\OpenButton.cs" />
+    <Compile Include="Assets\Scripts\ScreenTouch.cs" />
     <Compile Include="Assets\Scripts\ShowPanel.cs" />
     <Compile Include="Assets\Scripts\ShowText.cs" />
     <Compile Include="Assets\Scripts\SliderScript.cs" />
@@ -646,7 +647,16 @@
       <HintPath>C:/Users/HP/The-MadMan/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SimpleInput.Runtime.csproj">
+      <Project>{E459D549-0BD6-BA33-572A-41850AD6A8D3}</Project>
+      <Name>SimpleInput.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleInput.Editor.csproj">
+      <Project>{781DA7A7-4A30-B4C6-1869-2B3B2AED63AE}</Project>
+      <Name>SimpleInput.Editor</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
