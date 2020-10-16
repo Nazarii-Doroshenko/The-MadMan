@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 //using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UDP;
+
 public class ChangeMenuScenes : MonoBehaviour
 {
     //public AudioSource source;
@@ -19,12 +21,26 @@ public class ChangeMenuScenes : MonoBehaviour
     {
         SceneManager.LoadScene("Labyrinth Menu");
     }
+    public void MathsMenu()
+    {
+        SceneManager.LoadScene("Maths menu");
+    }
     public void SettingsMenu()
     {
         SceneManager.LoadScene("Settings Menu");
+    }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+    public void Shop()
+    {
+        SceneManager.LoadScene("Shop");
     }
     public void Quit()
     {
         Application.Quit();
     }
+    
+    
 }

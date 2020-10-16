@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -107981364, guid: 741884b37a0234d86bb740e55081cd5f, type: 3}
+  m_Name: UDP Settings
+  m_EditorClassIdentifier: 
+  UnityProjectID: 726eb28c-7cef-4aa7-97c3-c4237f2f9a33
+  UnityClientID: bIPCIcYR4j0ail7JhcwLZg
+  UnityClientKey: oRNEmt0gIRJS_lbcyEtsKzrc3E0VqnfSmfPCFw2YrC4
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlR5rv6qKl8LvEpgIU2XfnLBLt4FJHxpXbt2TgOd887Urm/fwP50HqOaqiIq3O1YjcV0+zsgmAmuw//oQOWGaPV0Ncqv3G4TSTZYuxG2ucgnymarVI87ATxHjjRtiBp7K8Pgu44Jn9D3rll0eah51jyjtpIJCNIC2Ntzn46DYvT1ATm/ZRN4dyfd+6YGVhVczJAdTzeheVR6hpSS3MQYXDEGjv0QQzxn3gLDxzJdnyI7vMim4dCaRQlqCWxn+gPVWzbFt8dH1swumYiki8eKKlYEcVpf3ng/qhYUveUx7VmVBRDQN0cOP92Evvp0z0ilhC79uDxGr0z/kGaakY6+PDwIDAQAB
+  AppName: TheMadMan
+  AppSlug: d7407f40-d194-4e00-81ef-bf90cbbc4a4e
+  AppItemId: 5f11a8519cb6e1001fe732dc
+  Permission: 

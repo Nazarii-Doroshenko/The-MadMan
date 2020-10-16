@@ -11,7 +11,16 @@ public class CameraRotation : MonoBehaviour
 
     private float yaw = 0.0f;
     private float pitch = 0.0f;
-
+    //////////////////////////////////////////////// 
+    public float x;/////////////////////////////////
+    public float y;/////////////////////////////////
+    public float z;/////////////////////////////////
+    //////////////////////////////////////////////// 
+    void Start()
+    {
+        
+        transform.eulerAngles = new Vector3(x, y, z);
+    }
     void Update()
     {
        if (Input.GetMouseButton(1))

@@ -39,6 +39,11 @@ public class ChangeSceneLabyrinth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (sceneNum == 2)
+        {
+            Labyrinth_Lvl_2();
+        }
+
         if (sceneNum == 3)
         {
             Labyrinth_Lvl_3();

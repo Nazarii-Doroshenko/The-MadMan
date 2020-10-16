@@ -39,6 +39,9 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
+  - {fileID: 3424643569510565532}
+  - {fileID: 2133658074402011744}
+  - {fileID: 1785583089059478461}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -66,5 +69,72 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: fcffe95677390b04d8eafa40bde551d0
-  m_FloatValues: {}
+  m_FloatValues:
+    b46a2a108c0e7a243b55f7d938352d2c: 0
+    c0c57270049477c4b9dac860864c9a08: -10
+    03458775ccfd4604987fa1b88cb5d7bc: 13952
+    1c4a29e6ab21d624ebd778587c3e5444: 557
+    2000df59824740044b81dc0e6b4ad27c: 1
+    38258ecb9e3cae34a91667c322a92172: 10
+    34b4466d4a2eac44895ba306bd82443f: 1000
   m_TransitionOverrides: {}
+--- !u!244 &1785583089059478461
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2d00bfdd968aed2488023e1365082a21
+  m_EffectName: Compressor
+  m_MixLevel: d15ca58c0be6d1140b7d0c2ca3073f20
+  m_Parameters:
+  - m_ParameterName: Threshold
+    m_GUID: c0c57270049477c4b9dac860864c9a08
+  - m_ParameterName: Attack
+    m_GUID: 38258ecb9e3cae34a91667c322a92172
+  - m_ParameterName: Release
+    m_GUID: 34b4466d4a2eac44895ba306bd82443f
+  - m_ParameterName: Make up gain
+    m_GUID: b46a2a108c0e7a243b55f7d938352d2c
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &2133658074402011744
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 5181c2e7a3aa4414c872f29d2b625f5d
+  m_EffectName: Normalize
+  m_MixLevel: c840629362028f1478d9cb6e35c0b92f
+  m_Parameters:
+  - m_ParameterName: Fade in time
+    m_GUID: 5bd3310b713bfdb4bb6ccb364689f448
+  - m_ParameterName: Lowest volume
+    m_GUID: 10e17fc5061630443a8edaf76f4c5bff
+  - m_ParameterName: Maximum amp
+    m_GUID: 1b4b6a5b904f57941bcce71612f4c9a2
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &3424643569510565532
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: a87f3abe542523f49adf1752f1aff7e9
+  m_EffectName: Lowpass
+  m_MixLevel: 7883695edbe753345a4ab91d54a64f91
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: 1c4a29e6ab21d624ebd778587c3e5444
+  - m_ParameterName: Resonance
+    m_GUID: 2000df59824740044b81dc0e6b4ad27c
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

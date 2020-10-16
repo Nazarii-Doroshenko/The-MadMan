@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 public class OpenButton : MonoBehaviour
 {
-    public Button openButton;
+    //public Button openButton;
 
     public GameObject door;
 
@@ -20,6 +20,7 @@ public class OpenButton : MonoBehaviour
 
     public void openDoor()
     {
+        
         if (n == 0)
         {
             previous = door.transform.localScale;
@@ -33,5 +34,5 @@ public class OpenButton : MonoBehaviour
             sourceDoor2.Play();
             n--;           
         }
-    }  
+    }
 }
